@@ -1,1 +1,1 @@
-# Mad_hatters
+# Mad_hatters - бесплатный макет для практики

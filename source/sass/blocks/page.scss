@@ -1,0 +1,12 @@
+.page {
+  height: 100%;
+  font-family: $poppins;
+  font-size: 16px;
+  line-height: 26px;
+  color: $basic_red-gray;
+}
+
+.page__body {
+  min-height: 100%;
+  margin: 0 auto;
+}
