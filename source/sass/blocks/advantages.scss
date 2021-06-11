@@ -1,4 +1,22 @@
 .advantages {
   outline-offset: -2px;
   outline: 2px solid rgba(192, 45, 131, 0.7);
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.advantages__item {
+  padding-bottom: 20px;
+
+  & h3 {
+    color: $special_black;
+    font-family: $playfair_display;
+    font-style: italic;
+  }
+
+  & p {
+    padding-left: 20px;
+    padding-top: 10px;
+  }
 }

@@ -1,4 +1,42 @@
 .quote {
   outline-offset: -2px;
   outline: 2px solid rgba(192, 45, 131, 0.7);
+  font-family: $playfair_display;
+  font-weight: 700;
+  font-size: 20px;
+  color: $basic_black;
+  text-align: center;
+  padding: 40px;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    font-size: 48px;
+  }
+}
+
+
+.quote__text {
+  @media (min-width: $desktop-width) {
+    &::before {
+      content: "";
+      background-image: url("../img/quote-top.svg");
+      background-repeat: no-repeat;
+      width: 120px;
+      height: 150px;
+      fill: red;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      background-image: url("../img/quote-bottom.svg");
+      background-repeat: no-repeat;
+      width: 120px;
+      height: 150px;
+      fill: red;
+      position: absolute;
+      z-index: -1;
+    }
+  }
 }

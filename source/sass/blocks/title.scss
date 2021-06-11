@@ -1,4 +1,8 @@
 .title {
+  font-family: $playfair_display;
+  font-weight: 700;
+  color: $basic_black;
+
   @media (min-width: 1140px) {
     font-size: 102px;
     line-height: 110px;
