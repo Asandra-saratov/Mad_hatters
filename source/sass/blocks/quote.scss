@@ -16,7 +16,7 @@
 
 
 .quote__text {
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     &::before {
       content: "";
       background-image: url("../img/quote-top.svg");
