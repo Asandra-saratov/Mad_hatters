@@ -14,3 +14,13 @@ navToggle.addEventListener('click', function () {
     navMain.classList.remove('main-nav--opened');
   }
 });
+
+let range__list = document.querySelectorAll('.range__list .range__item');
+let currentCarousel = 0;
+let carouselInterval = setInterval(nextCarousel, 6000);
+function nextCarousel() {
+  range__list[currentCarousel].className = 'range__item';
+  currentCarousel = (currentCarousel + 1) % range__list.length;
+  range__list[currentCarousel].className = 'range__item range__demonstration';
+};
+
