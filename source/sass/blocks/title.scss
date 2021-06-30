@@ -1,0 +1,12 @@
+.title {
+  font-family: $playfair_display;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 700;
+  color: $basic_black;
+
+  @media (min-width: $desktop-width) {
+    font-size: 102px;
+    line-height: 110px;
+  }
+}

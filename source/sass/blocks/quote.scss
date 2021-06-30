@@ -1,0 +1,62 @@
+.quote {
+  font-family: $playfair_display;
+  font-weight: 700;
+  font-size: 20px;
+  color: $basic_black;
+  text-align: center;
+  padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    outline-offset: -2px;
+    outline: 2px solid rgba(192, 45, 131, 0.7);
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 48px;
+  }
+}
+
+
+.quote__text {
+  position: relative;
+  display: inline-block;
+
+  &::before,
+  &::after {
+    content: "\201C";
+    font-size: 60px;
+    color: $basic_white;
+    -webkit-text-stroke: 1px $quote;
+    position: absolute;
+    opacity: 0.29;
+    z-index: -1;
+  }
+
+  &::before {
+    left: -16px;
+    top: 2px;
+  }
+
+  &::after {
+    content: "\201D";
+    right: -18px;
+    top: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+
+    &::before,
+    &::after {
+      font-size: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+
+      &::before,
+      &::after {
+        font-size: 218px;
+        line-height: 291px;
+      }
+    }
+  }
+}

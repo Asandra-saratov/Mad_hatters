@@ -1,0 +1,38 @@
+.page-footer {
+  outline-offset: -2px;
+  outline: 2px solid rgba(192, 45, 131, 0.7);
+  background-color: #23242c;
+  color: $basic_white;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.page-footer__slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & img {
+    height: 24px;
+  }
+}
+
+.page-footer__wrapper {
+  justify-self: center;
+}
+
+.page-footer__copyright {
+  font-size: 10px;
+}
+
+.page-footer__shop {
+  padding-bottom: 10px;
+}
+
+.page-footer__list {
+  & li {
+    font-size: 11px;
+    padding-bottom: 3px;
+  }
+}
