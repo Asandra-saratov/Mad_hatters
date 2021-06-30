@@ -4,4 +4,11 @@
   border: 1px solid $border;
   border-radius: 6px;
   box-shadow: 0 4px 4px rgba($black, 0.25);
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 4px 4px rgba($shadow, 0.25);
+    opacity: 0.9;
+  }
 }
