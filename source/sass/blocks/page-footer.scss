@@ -12,6 +12,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  & img {
+    height: 24px;
+  }
 }
 
 .page-footer__wrapper {

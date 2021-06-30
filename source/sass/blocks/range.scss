@@ -1,7 +1,10 @@
 .range {
-  outline-offset: -2px;
-  outline: 2px solid rgba(192, 45, 131, 0.7);
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    outline-offset: -2px;
+    outline: 2px solid rgba(192, 45, 131, 0.7);
+  }
 }
 
 .range__subheading {
@@ -13,19 +16,8 @@
   padding-bottom: 30px;
 }
 
-.range__list {
-  position: relative;
-  height: 553px;
-}
-
 .range__item {
   background-color: $range_bg;
-
-  @media (max-width: $only-mobile-width) {
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-  }
 
   @media (min-width: $desktop-width) {
     max-width: 511px;
@@ -87,8 +79,4 @@
   &::after {
     margin-left: 25px;
   }
-}
-
-.range__demonstration {
-  opacity: 1;
 }

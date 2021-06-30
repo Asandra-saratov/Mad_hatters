@@ -9,4 +9,14 @@
 
 .main-nav__list {
   color: $basic_black;
+  padding-top: 10px;
+
+  & li {
+    padding-bottom: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: inherit;
+    border-bottom: 1px solid $border;
+    box-shadow: 0 4px 4px rgba($black, 0.05);
+  }
 }

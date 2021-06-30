@@ -1,8 +1,11 @@
 .newsletter {
-  outline-offset: -2px;
-  outline: 2px solid rgba(192, 45, 131, 0.7);
   padding: 20px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    outline-offset: -2px;
+    outline: 2px solid rgba(192, 45, 131, 0.7);
+  }
 }
 
 .newsletter__title {
@@ -15,6 +18,10 @@
     line-height: 110px;
     padding-bottom: 75px;
   }
+}
+
+.newsletter__text {
+  padding-bottom: 4px;
 }
 
 .newsletter__form {
