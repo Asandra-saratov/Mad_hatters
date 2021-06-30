@@ -1,6 +1,7 @@
 .page-header {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   padding: 20px;
 
   @media (min-width: $tablet-width) {
@@ -11,4 +12,8 @@
 
 .page-header__logo {
   margin: 0 auto;
+
+  & img {
+    vertical-align: middle;
+  }
 }

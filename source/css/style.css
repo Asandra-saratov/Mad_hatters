@@ -90,7 +90,11 @@ p {
   padding: 12px 27px;
   border: 1px solid #cfadac;
   border-radius: 6px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer; }
+  .button:focus, .button:hover {
+    box-shadow: 0 4px 4px rgba(192, 45, 131, 0.25);
+    opacity: 0.9; }
 
 .catalog {
   padding-top: 10px; }
@@ -205,6 +209,7 @@ p {
 .page-header {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   padding: 20px; }
   @media (min-width: 768px) {
     .page-header {
@@ -213,28 +218,37 @@ p {
 
 .page-header__logo {
   margin: 0 auto; }
+  .page-header__logo img {
+    vertical-align: middle; }
 
 .page-footer {
-  outline-offset: -2px;
-  outline: 2px solid rgba(192, 45, 131, 0.7);
   background-color: #23242c;
   color: #ffffff;
   padding: 20px;
   display: grid;
   grid-template-columns: 50% 50%; }
+  @media (min-width: 768px) {
+    .page-footer {
+      outline-offset: -2px;
+      outline: 2px solid rgba(192, 45, 131, 0.7); } }
 
 .page-footer__slogan {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
+  flex-direction: column; }
   .page-footer__slogan img {
     height: 24px; }
+
+.page-footer__tagline {
+  margin-bottom: auto;
+  padding-top: 32px; }
 
 .page-footer__wrapper {
   justify-self: center; }
 
 .page-footer__copyright {
-  font-size: 10px; }
+  font-size: 10px;
+  opacity: 0.5;
+  line-height: 14px; }
 
 .page-footer__shop {
   padding-bottom: 10px; }
@@ -292,6 +306,8 @@ p {
   display: flex;
   align-items: center;
   white-space: nowrap; }
+  .range__link:focus, .range__link:hover {
+    opacity: 0.8; }
   @media (min-width: 768px) {
     .range__link {
       font-size: 36px; } }
@@ -328,12 +344,6 @@ p {
   z-index: 2;
   cursor: pointer; }
 
-.toggle::before {
-  transform: rotate(45deg); }
-
-.toggle::after {
-  transform: rotate(-45deg); }
-
 .toggle::after,
 .toggle::before {
   content: "";
@@ -343,7 +353,14 @@ p {
   width: 24px;
   height: 1.5px;
   background-color: #000;
-  box-shadow: none; }
+  box-shadow: none;
+  transition: bottom 600ms 600ms cubic-bezier(0.23, 1, 0.32, 1), transform 600ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.toggle::before {
+  transform: rotate(45deg); }
+
+.toggle::after {
+  transform: rotate(-45deg); }
 
 .toggle--closed {
   width: 24px;
@@ -369,7 +386,10 @@ p {
   font-size: 20px;
   color: #23242c;
   text-align: center;
-  padding: 20px; }
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px; }
   @media (min-width: 768px) {
     .quote {
       outline-offset: -2px;

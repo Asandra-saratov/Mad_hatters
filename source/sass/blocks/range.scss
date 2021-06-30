@@ -59,6 +59,11 @@
   align-items: center;
   white-space: nowrap;
 
+  &:focus,
+  &:hover {
+    opacity: 0.8;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 36px;
   }
