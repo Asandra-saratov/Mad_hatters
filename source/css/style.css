@@ -74,7 +74,8 @@ p {
     .advantages {
       padding-left: 80px;
       padding-right: 80px;
-      padding-bottom: 40px; } }
+      padding-bottom: 60px;
+      padding-top: 40px; } }
   @media (min-width: 1440px) {
     .advantages {
       outline-offset: -2px;
@@ -111,6 +112,7 @@ p {
   @media (min-width: 768px) {
     .catalog {
       display: flex;
+      justify-content: center;
       padding-top: 0;
       padding-left: 90px;
       padding-right: 90px; } }
@@ -338,7 +340,7 @@ p {
     .range {
       padding-left: 80px;
       padding-right: 80px;
-      padding-top: 40px; } }
+      padding-top: 60px; } }
   @media (min-width: 1440px) {
     .range {
       outline-offset: -2px;
