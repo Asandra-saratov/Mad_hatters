@@ -3,6 +3,11 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
     outline-offset: -2px;
     outline: 2px solid rgba(192, 45, 131, 0.7);
   }

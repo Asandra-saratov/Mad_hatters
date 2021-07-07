@@ -4,9 +4,20 @@
   padding-right: 20px;
 
   @media (min-width: $tablet-width) {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
     outline-offset: -2px;
     outline: 2px solid rgba(192, 45, 131, 0.7);
   }
+}
+
+.advantages__list {
+  display: flex;
+  column-gap: 10px;
 }
 
 .advantages__item {

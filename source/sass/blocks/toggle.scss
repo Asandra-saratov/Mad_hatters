@@ -8,6 +8,10 @@
   background-color: inherit;
   z-index: 2;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .toggle::after,

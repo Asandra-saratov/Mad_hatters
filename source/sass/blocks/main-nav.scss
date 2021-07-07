@@ -5,6 +5,17 @@
   &--opened {
     display: block;
   }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 392px;
+    padding-right: 392px;
+  }
 }
 
 .main-nav__list {
@@ -18,5 +29,16 @@
     color: inherit;
     border-bottom: 1px solid $border;
     box-shadow: 0 4px 4px rgba($black, 0.05);
+
+    @media (min-width: $tablet-width) {
+      border-bottom: none;
+      box-shadow:none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
