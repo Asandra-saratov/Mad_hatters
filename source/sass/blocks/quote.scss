@@ -9,12 +9,9 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     outline-offset: -2px;
     outline: 2px solid rgba(192, 45, 131, 0.7);
-  }
-
-  @media (min-width: $desktop-width) {
     font-size: 48px;
   }
 }
