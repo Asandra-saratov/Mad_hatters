@@ -6,7 +6,7 @@
   object-fit: cover;
   object-position: top;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     width: auto;
     height: auto;
   }
@@ -14,11 +14,11 @@
   &--position {
     display: none;
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       display: block;
-      position: relative;
-      left: 142px;
-      top: -230px;
+      position: absolute;
+      left: 50%;
+      top: 30%;
       z-index: 1;
     }
   }

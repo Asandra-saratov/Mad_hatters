@@ -6,6 +6,11 @@
   grid-template-columns: 50% 50%;
 
   @media (min-width: $tablet-width) {
+    grid-template-columns: 40% 60%;
+    padding-left: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
     outline-offset: -2px;
     outline: 2px solid rgba(192, 45, 131, 0.7);
   }
@@ -26,7 +31,14 @@
 }
 
 .page-footer__wrapper {
-  justify-self: center;
+  @media (max-width: $only-mobile-width) {
+    justify-self: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 
 .page-footer__copyright {
@@ -37,6 +49,10 @@
 
 .page-footer__shop {
   padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 0;
+  }
 }
 
 .page-footer__list {
