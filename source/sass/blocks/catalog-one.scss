@@ -1,16 +1,96 @@
+.catalog-one {
+  @media (min-width: $desktop-width) {
+    max-width: 1081px;
+    position: relative;
+    right: 3%;
+  }
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      top: 172px;
+      left: 480px;
+      width: 518px;
+      height: 518px;
+      border-radius: 50%;
+      border: 1px solid $basic_black;
+      opacity: 0.1;
+      z-index: -2;
+    }
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      top: 297px;
+      left: 606px;
+      width: 246px;
+      height: 246px;
+      border-radius: 50%;
+      background: rgba($catalog_bg, 0.4);
+      z-index: -2;
+    }
+  }
+}
+
 .catalog-one__title {
   padding-bottom: 18px;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 30px;
+  }
+}
+
+.catalog-one__span {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    font-size: 43px;
+    line-height: 40%;
+    position: relative;
+    top: -22px;
+    left: 20px;
+  }
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      content: "b";
+      position: absolute;
+      top: 10%;
+      left: -20px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      content: "c";
+      position: absolute;
+      top: 70%;
+      left: 10px;
+    }
+  }
 }
 
 .catalog-one__text {
   padding-left: 40px;
   padding-right: 20px;
-  padding-bottom: 75px;
-  padding-top: 75px;
+  padding-bottom: 25px;
+  padding-top: 25px;
 
   @media (min-width: $tablet-width) {
     padding-left: 0;
     padding-right: 100px;
+    padding-top: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 200px;
+    padding-bottom: 251px;
+    padding-right: 45px;
+
   }
 }
 
@@ -20,9 +100,25 @@
     padding-top: 40px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
+
   & img {
     @media (min-width: $tablet-width) {
-      max-height: 185px;
+      width: 150px;
     }
+
+    @media (min-width: $desktop-width) {
+      max-height: 370px;
+      padding-top: 137px;
+      width: auto;
+    }
+  }
+}
+
+.catalog-one__paddind {
+  @media (min-width: $desktop-width) {
+    padding-left: 30px;
   }
 }
