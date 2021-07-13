@@ -8,8 +8,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    outline-offset: -2px;
-    outline: 2px solid rgba(192, 45, 131, 0.7);
+    padding-top: 190px;
   }
 }
 
@@ -20,15 +19,38 @@
 
 .range__title {
   padding-bottom: 30px;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 128px;
+  }
 }
 
 .range__list {
   max-width: 511px;
   margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1141px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 119px;
+  }
 }
 
 .range__item {
   background-color: $range_bg;
+
+  &:nth-child(odd) {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 84px;
+    }
+  }
+
+  &:nth-child(even) {
+    @media (min-width: $desktop-width) {
+      margin-top: 84px;
+    }
+  }
 
   @media (min-width: $desktop-width) {
     max-width: 511px;
@@ -39,7 +61,7 @@
     font-size: 28px;
     line-height: 54px;
     font-style: italic;
-    padding-top: 18px;
+    padding-top: 12px;
     padding-bottom: 10px;
 
     @media (min-width: $desktop-width) {
@@ -55,6 +77,35 @@
   }
 }
 
+.range__link-wrapper {
+  position: relative;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 511px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      content: "More";
+      font-family: $playfair_display;
+      font-size: 182.38px;
+      line-height: 243px;
+      position: absolute;
+      font-weight: bold;
+      color: #23242C;
+      opacity: 0.04;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 0;
+    }
+  }
+}
+
 .range__link {
   font-family: $playfair_display;
   font-weight: 900;
@@ -63,20 +114,29 @@
   color: $basic_black;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   position: relative;
   display: flex;
   align-items: center;
   white-space: nowrap;
 
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 40px;
+    padding-bottom: 77px;
+    max-width: 1141px;
+    margin: 0 auto;
+  }
+
   &:focus,
   &:hover {
     opacity: 0.8;
-  }
-
-  @media (min-width: $tablet-width) {
-    font-size: 36px;
   }
 
   &::before,
@@ -89,7 +149,7 @@
   }
 
   &::before {
-    margin-right: 12px;
+    margin-right: 26px;
   }
 
   &::after {
