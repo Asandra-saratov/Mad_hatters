@@ -1,15 +1,17 @@
 .newsletter {
   padding: 20px;
   text-align: center;
+  background-color: $newsletter_bg;
 
   @media (min-width: $tablet-width) {
-    padding-left: 90px;
-    padding-right: 90px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    outline-offset: -2px;
-    outline: 2px solid rgba(192, 45, 131, 0.7);
+    padding-top: 68px;
+    padding-bottom: 70px;
   }
 }
 
@@ -21,28 +23,76 @@
   @media (min-width: $desktop-width) {
     font-size: 102px;
     line-height: 110px;
-    padding-bottom: 75px;
+    padding-bottom: 76px;
   }
 }
 
 .newsletter__text {
+  line-height: 24px;
   padding-bottom: 4px;
 }
 
 .newsletter__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+
+  @media (min-width: $tablet-width) {
+    flex-wrap: nowrap;
+  }
+
   & input {
+    font-family: $poppins;
+    font-size: 18px;
+    line-height: 22px;
     border: none;
     border-bottom: 1px solid rgba($basic_red-gray, 0.5);
     width: 100%;
-    margin-bottom: 15px;
-    outline: 0;
-    font-family: inherit;
-    padding-left: 4px;
-    opacity: 1;
+    max-width: 738px;
+    padding: 0;
+    padding-left: 14px;
     box-sizing: border-box;
+    margin-bottom: 20px;
+    outline: 0;
+    opacity: 1;
+    background-color: inherit;
+    color: $placelolder;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 28px;
+      line-height: 42px;
+      margin-left: -24px;
+    }
 
     &::placeholder {
       color: $placelolder;
+
+      @media (min-width: $desktop-width) {
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 42px;
+
+      }
+    }
+
+    &:invalid {
+      &:not(:focus) {
+
+        &:not(:placeholder-shown),
+        &:focus {
+          border-bottom: 1px solid $error;
+        }
+      }
     }
   }
+}
+
+.newsletter__button {
+  margin-left: 20px;
 }

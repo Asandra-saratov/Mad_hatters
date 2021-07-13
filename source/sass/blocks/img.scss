@@ -7,8 +7,11 @@
   object-position: top;
 
   @media (min-width: $tablet-width) {
-    width: auto;
     height: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
   }
 
   &--position {
@@ -17,9 +20,13 @@
     @media (min-width: $tablet-width) {
       display: block;
       position: absolute;
-      left: 50%;
+      left: 55%;
       top: 30%;
       z-index: 1;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 17.5%;
     }
   }
 }
