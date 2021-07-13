@@ -8,14 +8,47 @@
   padding-right: 20px;
   padding-top: 50px;
   padding-bottom: 50px;
+  position: relative;
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      width: 518px;
+      height: 518px;
+      border: 1px solid $border_orange;
+      border-radius: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      left: 50%;
+      z-index: -1;
+    }
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      width: 341px;
+      height: 341px;
+      border-radius: 50%;
+      top: 89px;
+      transform: translateX(-50%);
+      left: 50%;
+      box-shadow: 0px 0px 64px $border_orange;
+      z-index: -2;
+    }
+  }
 
   @media (min-width: $desktop-width) {
-    outline-offset: -2px;
-    outline: 2px solid rgba(192, 45, 131, 0.7);
     font-size: 48px;
+    line-height: 64px;
+    padding-bottom: 227px;
+    padding-top: 227px;
+    margin-top: 113px;
+    margin-bottom: 92px;
   }
 }
-
 
 .quote__text {
   position: relative;
@@ -26,37 +59,39 @@
     content: "\201C";
     font-size: 60px;
     color: $basic_white;
-    -webkit-text-stroke: 1px $quote;
+    -webkit-text-stroke: 1px $shadow;
     position: absolute;
     opacity: 0.29;
     z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 218px;
+      line-height: 291px;
+    }
   }
 
   &::before {
     left: -16px;
     top: 2px;
+
+    @media (min-width: $desktop-width) {
+      left: -65px;
+      top: -100px;
+    }
   }
 
   &::after {
     content: "\201D";
     right: -18px;
     top: 20px;
-  }
-
-  @media (min-width: $tablet-width) {
-
-    &::before,
-    &::after {
-      font-size: 60px;
-    }
 
     @media (min-width: $desktop-width) {
-
-      &::before,
-      &::after {
-        font-size: 218px;
-        line-height: 291px;
-      }
+      right: -70px;
+      top: -50px;
     }
   }
 }
