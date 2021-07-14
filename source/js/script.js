@@ -18,7 +18,7 @@ var slideIndex = 0;
 showSlides();
 
 function showSlides() {
-  const viewportWidth = window.innerWidth;
+  var viewportWidth = window.innerWidth;
   if (viewportWidth < 1440) {
     var i;
     var slides = document.getElementsByClassName("range__item");
